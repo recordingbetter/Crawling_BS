@@ -38,13 +38,11 @@ class Episode:
         return self._date
 
 
-def get_episode_num(table_view):
+def get_episode_num(html):
     '''
     에피소드의 번호
-    :param table_view: 
-    :return: 
     '''
-    a_num = table_view.find_all('tr')[3].a['href']
+    a_num = html.find_all('tr')[3].a['href']
     pre_max_num = re.search(r'&no=([0-9]*?)&', a_num)
     return int(pre_max_num.group(1))
 
