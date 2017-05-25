@@ -30,19 +30,12 @@ wt_viewer = soup.find('div', 'wt_viewer')
 img_list = wt_viewer.find_all('img')
 # print(img_list)
 
-# 찾아진 이미지 갯수만큼 반복 (저장 기능을 위해 리스트로 저장)
+# 찾아진 이미지 갯수만큼 반복
 img_link_list = []
 for idx, img in enumerate(img_list):
     # print(img)
     img_link = img['src']
     print(idx, img_link)
     img_link_list.append(img_link)
-    # save = requests.get(img_link).content
-    # with open('test{}.jpg'.format(idx+1), 'wb') as img_save:
-    #     img_save.write(save)
-#
-# # choice가 y가아니면 프로그램 종료
-# choice = input('저장하시겠습니까? (y/N):')
-# if choice.lower() != 'y':
-#     print('프로그램을 종료합니다.')
-#     sys.exit(1)
+
+
