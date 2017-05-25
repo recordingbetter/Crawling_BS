@@ -91,8 +91,8 @@ while i <= max_num:
             rating = rating,
             date = date,
         )
-        # 썸네일저장
         episode_list.append(episode)
+        # 썸네일저장
         save = requests.get(link).content
         directory_name = wtn_id+'_images'
         # 썸네일을 저장할 폴더가 없으면 만들어준다.
